@@ -21,12 +21,36 @@
     reps: document.getElementById("ex-reps"),
     prev: document.getElementById("btn-prev"),
     next: document.getElementById("btn-next"),
+    timerVal: document.getElementById("ex-timer-val"),
   };
+
+  // ── Cronómetro por ejercicio (cuenta hacia arriba desde 0) ──
+  var timerId = null;
+  var timerStart = 0;
+
+  function paintTimer() {
+    var s = Math.floor((Date.now() - timerStart) / 1000);
+    var m = Math.floor(s / 60);
+    var ss = s % 60;
+    els.timerVal.textContent =
+      String(m).padStart(2, "0") + ":" + String(ss).padStart(2, "0");
+  }
+  function startTimer() {
+    timerStart = Date.now();
+    paintTimer();
+    if (timerId) clearInterval(timerId);
+    timerId = setInterval(paintTimer, 250);
+  }
+  function stopTimer() {
+    if (timerId) { clearInterval(timerId); timerId = null; }
+  }
 
   function show(name) {
     Object.keys(screens).forEach(function (k) {
       screens[k].classList.toggle("is-active", k === name);
     });
+    // El cronómetro solo corre en la pantalla de ejercicio.
+    if (name !== "exercise") stopTimer();
   }
 
   // Nº total de ejercicios reales (los avisos no cuentan).
@@ -50,11 +74,14 @@
 
     if (isNote) {
       // Pantalla de aviso / cambio de material (no cuenta como ejercicio).
+      stopTimer();
       els.name.textContent = item.note;
       els.reps.style.display = "none";
       els.figure.classList.add("is-empty");
       els.image.removeAttribute("src");
     } else {
+      // Cada ejercicio arranca su cronómetro desde 0.
+      startTimer();
       els.name.textContent = item.name;
       els.reps.textContent = item.reps || "";
       els.reps.style.display = item.reps ? "" : "none";

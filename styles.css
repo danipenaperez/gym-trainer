@@ -121,6 +121,19 @@ body {
   border-radius: 999px;
 }
 
+/* Cronómetro por ejercicio (cuenta hacia arriba, se reinicia al cambiar) */
+.ex-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.ex-timer-ico { font-size: 1rem; }
+.screen.is-note .ex-timer { display: none; }
+
 /* Pantalla de aviso / cambio de material */
 .ex-note-icon { display: none; font-size: 84px; line-height: 1; }
 .screen.is-note .ex-note-icon { display: block; }

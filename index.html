@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gym Trainer</title>
+  <meta name="description" content="Tu rutina de entrenamiento en casa, guiada paso a paso." />
+
+  <!-- Instalable / pantalla completa -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0f1115" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Gym Trainer" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+
+    <!-- Pantalla de inicio -->
+    <section id="screen-start" class="screen is-active">
+      <div class="hero">
+        <div class="hero-icon" aria-hidden="true">🏋️</div>
+        <h1>Gym Trainer</h1>
+        <p class="sub">Tu rutina de casa, ejercicio por ejercicio.</p>
+      </div>
+      <button id="btn-start" class="btn btn-primary btn-lg">Empezar</button>
+    </section>
+
+    <!-- Pantalla de ejercicio -->
+    <section id="screen-exercise" class="screen">
+      <header class="ex-header">
+        <div class="progress">
+          <span id="progress-text" class="progress-text">1 / 1</span>
+          <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+        </div>
+      </header>
+
+      <div class="ex-body">
+        <div id="ex-note-icon" class="ex-note-icon" aria-hidden="true">🏋️</div>
+        <figure id="ex-figure" class="ex-figure">
+          <img id="ex-image" alt="" />
+        </figure>
+        <h2 id="ex-name" class="ex-name">—</h2>
+        <p id="ex-reps" class="ex-reps">—</p>
+      </div>
+
+      <footer class="ex-footer">
+        <button id="btn-prev" class="btn btn-ghost">← Atrás</button>
+        <button id="btn-next" class="btn btn-primary">Siguiente →</button>
+      </footer>
+    </section>
+
+    <!-- Pantalla final -->
+    <section id="screen-done" class="screen">
+      <div class="hero">
+        <div class="hero-icon" aria-hidden="true">✅</div>
+        <h1>¡Hecho!</h1>
+        <p class="sub">Sesión completada. Buen trabajo.</p>
+      </div>
+      <button id="btn-restart" class="btn btn-ghost btn-lg">Volver al inicio</button>
+    </section>
+
+  </main>
+
+  <script src="routine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#0f1115"/>
+  <!-- dibujo dentro de la zona segura (~80%) para máscaras circulares -->
+  <g fill="none" stroke="#4ade80" stroke-width="22" stroke-linecap="round">
+    <line x1="190" y1="256" x2="322" y2="256"/>
+    <rect x="150" y="216" width="34" height="80" rx="12" fill="#4ade80" stroke="none"/>
+    <rect x="184" y="196" width="30" height="120" rx="12" fill="#4ade80" stroke="none"/>
+    <rect x="298" y="196" width="30" height="120" rx="12" fill="#4ade80" stroke="none"/>
+    <rect x="328" y="216" width="34" height="80" rx="12" fill="#4ade80" stroke="none"/>
+  </g>
+</svg>

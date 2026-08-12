@@ -1,0 +1,7 @@
+# Configuración local de Claude Code (permisos por máquina)
+.claude/settings.local.json
+.claude/settings.local.json.tmp.*
+
+# Sistema
+.DS_Store
+Thumbs.db

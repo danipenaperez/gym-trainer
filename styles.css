@@ -138,3 +138,17 @@ body {
 @media (max-width: 360px) {
   .ex-name { font-size: 1.5rem; }
 }
+
+/* Landscape / pantallas bajas: que quepa todo sin que la imagen domine. */
+@media (orientation: landscape) and (max-height: 560px) {
+  #app { padding-top: calc(10px + var(--safe-t)); padding-bottom: calc(10px + var(--safe-b)); }
+  .ex-body { gap: 10px; }
+  .ex-figure { aspect-ratio: auto; max-width: 320px; max-height: 40dvh; }
+  .ex-name { font-size: 1.4rem; }
+  .ex-reps { font-size: 1.05rem; padding: 6px 14px; }
+  .ex-footer { padding-top: 10px; }
+  .hero-icon { font-size: 52px; }
+  .hero h1 { font-size: 1.6rem; }
+  .ex-note-icon { font-size: 56px; }
+  .screen.is-note .ex-name { font-size: 1.7rem; }
+}

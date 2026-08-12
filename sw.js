@@ -1,7 +1,7 @@
 // Service worker: permite instalar la app y usarla sin conexión.
 // Estrategia "red primero": si hay conexión, siempre ves la última versión;
 // sin conexión, tira de la copia cacheada.
-var CACHE_VERSION = "gym-trainer-v2";
+var CACHE_VERSION = "gym-trainer-v3";
 
 var ASSETS = [
   "./",

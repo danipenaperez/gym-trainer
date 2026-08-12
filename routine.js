@@ -18,16 +18,16 @@ const ROUTINES = [
   {
     id: "A",
     name: "Lunes · Miércoles · Viernes",
-    subtitle: "Hombro · Dorsal · Tríceps",
+    subtitle: "Pecho · Hombro · Tríceps",
     items: [
+      // ── PECHO (mancuernas) ──
+      { name: "Pecho · aperturas «pájaro» tumbado en suelo",                 reps: "3×12", image: "img/07-pecho-aperturas.png" },
+      { name: "Pecho · subida vertical tumbado en suelo",                    reps: "3×12", image: "img/08-pecho-subida.png" },
+
       // ── HOMBRO (mancuernas) ──
       { name: "Hombro · elevaciones verticales sentado (dos brazos)",       reps: "3×12", image: "img/01-hombro-vertical-sentado.png" },
       { name: "Hombro · elevaciones laterales «pájaro» (dos brazos)",        reps: "3×12", image: "img/02-hombro-lateral-pajaro.png" },
       { name: "Hombro · elevaciones frontales (alternando brazos)",          reps: "3×12", image: "img/03-hombro-frontal.png" },
-
-      // ── DORSAL (mancuernas) ──
-      { name: "Dorsal · remo con apoyo en banco · brazo derecho",            reps: "3×12", image: "img/05-dorsal-remo-derecho.png" },
-      { name: "Dorsal · remo con apoyo en banco · brazo izquierdo",          reps: "3×12", image: "img/06-dorsal-remo-izquierdo.png" },
 
       // ── TRÍCEPS (mancuernas) ──
       { name: "Tríceps · por encima de la cabeza · brazo izquierdo",         reps: "3×12", image: "img/09-triceps-cabeza-izquierdo.png" },
@@ -46,11 +46,11 @@ const ROUTINES = [
   {
     id: "B",
     name: "Martes · Jueves · Fin de semana",
-    subtitle: "Pecho · Bíceps",
+    subtitle: "Dorsal · Bíceps",
     items: [
-      // ── PECHO (mancuernas) ──
-      { name: "Pecho · aperturas «pájaro» tumbado en suelo",                 reps: "3×12", image: "img/07-pecho-aperturas.png" },
-      { name: "Pecho · subida vertical tumbado en suelo",                    reps: "3×12", image: "img/08-pecho-subida.png" },
+      // ── DORSAL (mancuernas) ──
+      { name: "Dorsal · remo con apoyo en banco · brazo derecho",            reps: "3×12", image: "img/05-dorsal-remo-derecho.png" },
+      { name: "Dorsal · remo con apoyo en banco · brazo izquierdo",          reps: "3×12", image: "img/06-dorsal-remo-izquierdo.png" },
 
       // ── BÍCEPS (mancuernas) ──
       { name: "Bíceps · elevaciones normales",                               reps: "3×12", image: "img/04-biceps.png" },

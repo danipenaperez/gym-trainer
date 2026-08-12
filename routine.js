@@ -55,6 +55,9 @@ const ROUTINES = [
       // ── BÍCEPS (mancuernas) ──
       { name: "Bíceps · elevaciones normales",                               reps: "3×12", image: "img/04-biceps.png" },
 
+      // ── PIERNAS ──
+      { name: "Bosu (piernas)",                                              reps: "",     image: "" },
+
       // ── CAMBIO DE MATERIAL ──
       { note: "Monta la barra" },
 

@@ -73,6 +73,18 @@ body {
 .btn-ghost { background: var(--surface); color: var(--text); }
 .btn-lg { padding: 20px; font-size: 1.2rem; }
 
+/* ── Selección de día (pantalla de inicio) ── */
+.day-buttons { display: flex; flex-direction: column; gap: 12px; }
+.day-btn {
+  text-align: left;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.day-btn .day-name { font-size: 1.2rem; font-weight: 700; }
+.day-btn .day-sub { font-size: .95rem; color: var(--on-primary); opacity: .8; font-weight: 600; }
+
 /* ── Exercise screen ── */
 .ex-header { padding-bottom: 12px; }
 .progress { display: flex; flex-direction: column; gap: 8px; }

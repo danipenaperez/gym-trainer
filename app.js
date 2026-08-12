@@ -1,10 +1,11 @@
-// Gym Trainer — guía paso a paso de una rutina fija.
-// La rutina vive en routine.js (const ROUTINE). Aquí solo va la navegación.
+// Gym Trainer — guía paso a paso.
+// Las rutinas viven en routine.js (const ROUTINES). Aquí solo va la navegación.
 
 (function () {
   "use strict";
 
-  var index = 0; // ejercicio actual (0-based)
+  var index = 0;   // paso actual (0-based) dentro de la rutina elegida
+  var items = [];   // pasos de la rutina elegida (routine.items)
 
   // Elementos
   var screens = {
@@ -55,19 +56,19 @@
 
   // Nº total de ejercicios reales (los avisos no cuentan).
   function exerciseTotal() {
-    return ROUTINE.filter(function (i) { return !i.note; }).length;
+    return items.filter(function (i) { return !i.note; }).length;
   }
   // Cuántos ejercicios reales hay hasta `i` (excluido).
   function exercisesBefore(i) {
-    return ROUTINE.slice(0, i).filter(function (x) { return !x.note; }).length;
+    return items.slice(0, i).filter(function (x) { return !x.note; }).length;
   }
   // ¿Queda algún ejercicio real después de `i`?
   function hasExerciseAfter(i) {
-    return ROUTINE.slice(i + 1).some(function (x) { return !x.note; });
+    return items.slice(i + 1).some(function (x) { return !x.note; });
   }
 
   function render() {
-    var item = ROUTINE[index];
+    var item = items[index];
     var isNote = !!item.note;
 
     screens.exercise.classList.toggle("is-note", isNote);
@@ -113,14 +114,15 @@
     els.figure.classList.add("is-empty");
   });
 
-  function startSession() {
+  function startSession(routine) {
+    items = routine.items;
     index = 0; // siempre empieza desde el primero
     render();
     show("exercise");
   }
 
   function next() {
-    if (index < ROUTINE.length - 1) {
+    if (index < items.length - 1) {
       index++;
       render();
     } else {
@@ -135,8 +137,19 @@
     }
   }
 
+  // Botones de día en la pantalla de inicio (uno por rutina de routine.js).
+  var dayButtons = document.getElementById("day-buttons");
+  ROUTINES.forEach(function (routine) {
+    var btn = document.createElement("button");
+    btn.className = "btn btn-primary day-btn";
+    btn.innerHTML =
+      '<span class="day-name">' + routine.name + "</span>" +
+      '<span class="day-sub">' + routine.subtitle + "</span>";
+    btn.addEventListener("click", function () { startSession(routine); });
+    dayButtons.appendChild(btn);
+  });
+
   // Eventos
-  document.getElementById("btn-start").addEventListener("click", startSession);
   document.getElementById("btn-restart").addEventListener("click", function () {
     show("start");
   });

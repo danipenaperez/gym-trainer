@@ -33,13 +33,13 @@ const ROUTINES = [
 
       // ── HOMBRO lateral (mancuernas · 4 kg) ──
       { name: "Hombro · elevaciones laterales «pájaro» (dos brazos)",        reps: "4×12 · 4 kg", image: "img/02-hombro-lateral-pajaro.png" },
-      { name: "Hombro · elevaciones frontales (alternando brazos)",          reps: "3×12", image: "img/03-hombro-frontal.png" },
+      { name: "Hombro · elevaciones frontales (alternando brazos)",          reps: "4×12 · 4 kg", image: "img/03-hombro-frontal.png" },
 
-      // ── TRÍCEPS (mancuernas) ──
-      { name: "Tríceps · por encima de la cabeza · brazo izquierdo",         reps: "3×12", image: "img/09-triceps-cabeza-izquierdo.png" },
-      { name: "Tríceps · por encima de la cabeza · brazo derecho",           reps: "3×12", image: "img/10-triceps-cabeza-derecho.png" },
-      { name: "Tríceps · remo/patada en banco · brazo derecho",              reps: "3×12", image: "img/11-triceps-remo-derecho.png" },
-      { name: "Tríceps · remo/patada en banco · brazo izquierdo",            reps: "3×12", image: "img/12-triceps-remo-izquierdo.png" },
+      // ── TRÍCEPS (mancuernas · 4 kg) ──
+      { name: "Tríceps · por encima de la cabeza · brazo izquierdo",         reps: "4×12 · 4 kg", image: "img/09-triceps-cabeza-izquierdo.png" },
+      { name: "Tríceps · por encima de la cabeza · brazo derecho",           reps: "4×12 · 4 kg", image: "img/10-triceps-cabeza-derecho.png" },
+      { name: "Tríceps · remo/patada en banco · brazo derecho",              reps: "4×12 · 4 kg", image: "img/11-triceps-remo-derecho.png" },
+      { name: "Tríceps · remo/patada en banco · brazo izquierdo",            reps: "4×12 · 4 kg", image: "img/12-triceps-remo-izquierdo.png" },
 
       // ── CAMBIO DE MATERIAL ──
       { note: "Monta la barra" },

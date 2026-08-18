@@ -45,7 +45,6 @@ const ROUTINES = [
       { note: "Monta la barra" },
 
       // ── HOMBRO (barra) ──
-      { name: "Hombro · elevaciones verticales (cabeza al techo)",           reps: "3×12", image: "img/13-barra-hombro-vertical.png" },
       { name: "Hombro · trapecio, de cintura a pecho",                       reps: "3×12", image: "img/14-barra-trapecio.png" },
     ],
   },

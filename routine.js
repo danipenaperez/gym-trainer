@@ -20,13 +20,19 @@ const ROUTINES = [
     name: "Lunes · Miércoles · Viernes",
     subtitle: "Pecho · Hombro · Tríceps",
     items: [
-      // ── PECHO (mancuernas) ──
-      { name: "Pecho · aperturas «pájaro» tumbado en suelo",                 reps: "3×12", image: "img/07-pecho-aperturas.png" },
-      { name: "Pecho · subida vertical tumbado en suelo",                    reps: "3×12", image: "img/08-pecho-subida.png" },
+      // ── PECHO (mancuernas · 7 kg) ──
+      { note: "Pecho (opcional): en silla inclinada (pecho superior) o tumbado en el suelo" },
+      { name: "Pecho · aperturas «pájaro»",                                  reps: "4×15 · 7 kg", image: "img/07-pecho-aperturas.png" },
+      { name: "Pecho · subida vertical",                                     reps: "4×15 · 7 kg", image: "img/08-pecho-subida.png" },
 
-      // ── HOMBRO (mancuernas) ──
-      { name: "Hombro · elevaciones verticales sentado (dos brazos)",       reps: "3×12", image: "img/01-hombro-vertical-sentado.png" },
-      { name: "Hombro · elevaciones laterales «pájaro» (dos brazos)",        reps: "3×12", image: "img/02-hombro-lateral-pajaro.png" },
+      // ── HOMBRO vertical (mancuernas · 7 kg) ──
+      { name: "Hombro · elevaciones verticales sentado (dos brazos)",       reps: "4×15 · 7 kg", image: "img/01-hombro-vertical-sentado.png" },
+
+      // ── CAMBIO DE PESO ──
+      { note: "Baja el peso a 4 kg" },
+
+      // ── HOMBRO lateral (mancuernas · 4 kg) ──
+      { name: "Hombro · elevaciones laterales «pájaro» (dos brazos)",        reps: "4×12 · 4 kg", image: "img/02-hombro-lateral-pajaro.png" },
       { name: "Hombro · elevaciones frontales (alternando brazos)",          reps: "3×12", image: "img/03-hombro-frontal.png" },
 
       // ── TRÍCEPS (mancuernas) ──
@@ -48,21 +54,21 @@ const ROUTINES = [
     name: "Martes · Jueves · Fin de semana",
     subtitle: "Dorsal · Bíceps",
     items: [
-      // ── DORSAL (mancuernas) ──
-      { name: "Dorsal · remo con apoyo en banco · brazo derecho",            reps: "3×12", image: "img/05-dorsal-remo-derecho.png" },
-      { name: "Dorsal · remo con apoyo en banco · brazo izquierdo",          reps: "3×12", image: "img/06-dorsal-remo-izquierdo.png" },
+      // ── DORSAL (mancuernas · 7 kg) ──
+      { name: "Dorsal · remo con apoyo en banco · brazo izquierdo",          reps: "4×20 · 7 kg", image: "img/06-dorsal-remo-izquierdo.png" },
+      { name: "Dorsal · remo con apoyo en banco · brazo derecho",            reps: "4×20 · 7 kg", image: "img/05-dorsal-remo-derecho.png" },
 
-      // ── BÍCEPS (mancuernas) ──
-      { name: "Bíceps · elevaciones normales",                               reps: "3×12", image: "img/04-biceps.png" },
+      // ── BÍCEPS (mancuernas · 7 kg) ──
+      { name: "Bíceps · elevaciones normales",                               reps: "4×20 · 7 kg", image: "img/04-biceps.png" },
 
-      // ── PIERNAS ──
-      { name: "Bosu (piernas)",                                              reps: "",     image: "" },
+      // ── CAMBIO DE PESO ──
+      { note: "Baja el peso a 4 kg" },
 
-      // ── CAMBIO DE MATERIAL ──
-      { note: "Monta la barra" },
+      // ── DORSAL (mancuernas · 4 kg) ──
+      { name: "Dorsal · elevaciones laterales «pájaro» sentado (cabeza entre las rodillas, brazos arriba)", reps: "4×15 · 4 kg", image: "images/dorsales_elevaciones.jpeg" },
 
-      // ── BÍCEPS (barra) ──
-      { name: "Bíceps · con barra",                                          reps: "3×12", image: "img/15-barra-biceps.png" },
+      // ── TRÍCEPS (mancuernas · 4 kg) ──
+      { name: "Tríceps",                                                     reps: "4×20 · 4 kg", image: "img/09-triceps-cabeza-izquierdo.png" },
     ],
   },
 ];
